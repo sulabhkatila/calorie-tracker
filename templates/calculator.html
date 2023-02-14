@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Add food item
+{% endblock %}
+
+{% block main %}
+    <form action="/calculator" method="post">
+        <div class="form-group">
+            <!--<div>
+            <input autofocus required name="sex" placeholder="Man / Woman" type="text">
+            </div>
+            <div>-->
+                <div class="mb-3">
+                    <select name="food">
+                        <option disabled selected="selected">Sex</option>
+                        <option value="Man">Man</option>
+                        <option value="Woman">Woman</option>
+                    </select>
+                </div>
+                <input autofocus required name="height" placeholder="Height in cm" type="number">
+                </div>
+                <br>
+                <div>
+                    <input autofocus required name="age" placeholder="Age in years" type="number">
+                    </div>
+                    <br>
+                <div>
+                    <input autofocus required name="weight" placeholder="Weight in kg" type="number">
+                </div>
+                <br>
+                <select name="activity">
+                    <option disabled selected="selected">Activity Level</option>
+                    <option value=1.2>Sedentary</option>
+                    <option value=1.375>Lightly Active</option>
+                    <option value=1.55>Moderately Active</option>
+                    <option value=1.725>Very Active</option>
+
+                </select>
+            <br>
+            <br>
+
+        <button style='width: 200px' class="form-group btn btn-success" type="submit">Calculate</button>
+    </form>
+{% endblock %}

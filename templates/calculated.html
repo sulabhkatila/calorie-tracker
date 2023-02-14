@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Add food item
+{% endblock %}
+
+{% block main %}
+    <form action="/goal" method="get">
+        <div class="form-group">
+            <!--<div>
+            <input autofocus required name="sex" placeholder="Man / Woman" type="text">
+            </div>
+            <div>-->
+        <br>
+        <br>
+        <div class="center big-text highlight bold"> Your daily maintainance calories: {{ calories }}</div>
+        <br>
+        <br>
+        <div class="center m-text"> To add weight, your daily calorie goal should be around {{ calories + 200 }} calories</div>
+        <div class="center m-text"> To loose weight, your daily calorie goal should be around {{ calories - 200 }} calories</div>
+
+        <br>
+        <br>
+        <form action="/goal" method="get">
+            <button class="btn btn-primary" type="submit">Set a new Calorie goal</button>
+        </form>
+        <br>
+        <br>
+    </form>
+{% endblock %}

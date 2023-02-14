@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Remove
+{% endblock %}
+
+{% block main %}
+<form action="/remove" method="post">
+    <div class="mb-3">
+        Food Name:
+        <select name="food">
+            {% for i in food_today %}
+            <option>{{i["food"]}}</option>
+            {% endfor %}
+        </select>
+    </div>
+    <div class="mb-3">
+        Amount of grams:<input name="amount" id="number_stocks_sell_id" autofocus autocomplete="off" placeholder="Grams" class="form-control mx-auto w-auto" type="number">
+    </div>
+    <button class="btn btn-primary" type="submit">Remove</button>
+</form>
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Search
+{% endblock %}
+
+{% block main %}
+    <h1>Food item: {{name_food}}</h1>
+    <h3>Calories per 100 gram: {{calories_rate_100g}}</h3>
+    <br>
+    <form action="/add" method="get">
+        <button class="btn btn-primary" type="submit">Add</button>
+    </form>
+{% endblock %}

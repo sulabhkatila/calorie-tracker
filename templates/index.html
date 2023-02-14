@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Homepage
+{% endblock %}
+
+{% block main %}
+    <div class="center">Today's Calorie Intake</div>
+    <table style='margin-top: 30px' class="table table-striped table-dark">
+      <thead>
+        <tr>
+          <th scope="col">Food</th>
+          <th scope="col">Amount</th>
+          <th scope="col">Calories per 100 gram</th>
+          <th scope="col">Total calories</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for i, j in food_eaten.items() %}
+        <tr>
+          <th scope="row"> {{ i }} </th>
+          <td>  {{ j[1] }}  </td>
+          <td>  {{ j[2] }}  </td>
+          <td>  {{ j[3] }}  </td>
+        </tr>
+        {% endfor %}
+        <tr class="bg-success">
+            <th scope="row" colspan="3">Goal</th>
+            <td> {{calorie_goal}} </td>
+        </tr>
+        <tr class='bg-primary'>
+            <th scope="row" colspan="3">Remaining</th>
+            <td> {{remaining_calorie}} </td>
+        </tr>
+
+      </body>
+    </table>
+{% endblock %}

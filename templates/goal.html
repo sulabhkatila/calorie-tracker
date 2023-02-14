@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Add food item
+{% endblock %}
+
+{% block main %}
+    <form action="/goal" method="post">
+        <div class="form-group">
+            <div>
+            <input autofocus required name="goal" placeholder="Custom Goal" type="number">
+            </div>
+            <br>
+        <button style='width: 200px' class="form-group btn btn-success" type="submit">Set New Goal</button>
+    </form>
+{% endblock %}

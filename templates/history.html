@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Quote
+{% endblock %}
+
+{% block main %}
+    <table class="table table-striped">
+        <thead>
+            <tr>
+            <th>Food</th>
+            <th>Grams</th>
+            <th>Calorie per 100 gram</th>
+            <th>Total Calories</th>
+            <th>DateTime</th>
+            </tr>
+        </thead>
+        {% for i in user_history %}
+        <tr>
+            <td>{{i.food}}</td>
+            <td>{{i.grams_eaten}}</td>
+            <td>{{i.calorie_rate}}</td>
+            <td>{{i.grams_eaten * i.calorie_rate / 100}}</td>
+            <td>{{i.datetime}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+{% endblock %}

@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Add food item
+{% endblock %}
+
+{% block main %}
+    <form action="/add" method="post">
+        <div class="form-group">
+            <div>
+            <input autofocus required name="food" placeholder="Food Item" type="text">
+            </div>
+            <br>
+            <input required style='width: 155px' name="grams" placeholder="Grams eaten" type="number">
+        </div>
+        <br>
+        <button style='width: 200px' class="form-group btn btn-success" type="submit">Add</button>
+    </form>
+{% endblock %}
