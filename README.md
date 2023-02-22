@@ -5,10 +5,12 @@
 A simple application to help keep track of the calorie intake of the users. The application provides the user with the ability to add food items that they have consumed, calculate their daily caloric needs based on their gender, height, weight, and activity level, and finally, to track the total calorie intake for the day.
 To run the project, first run "export API_KEY=<APIKEY>". The APIKEY is the API key provided by USDA (https://fdc.nal.usda.gov/api-guide.html).
 
-#####Project Structure
+
+Project Structure
 The project consists of the following files:
 
-#####Templates Folder
+
+Templates Folder
 The templates folder contains all the HTML templates that the project uses. The following templates are present:
 
 add.html: for adding any food item. It has a form to enter the name of the food and the amount in grams.
@@ -24,14 +26,15 @@ search.html: to search the caloric details for any food item.
 searched.html: displays the name of the food item and the caloric details of the food item.
 layout.html: basic layout for the pages.
 
-#####calorie.db
+
+calorie.db
 This database file contains two tables, users and calorie_all.
 
 users stores the id, username, hash of the password, and the caloric goal.
 calorie_all stores the details of the tracked food for all the users.
 
 
-#####helpers.py
+helpers.py
 The helpers.py file contains all the helper functions that app.py requires. The following helper functions are present:
 
 apology(message, code=400): Renders the message as an apology to the user.
@@ -39,7 +42,8 @@ login_required(f): Decorates routes to require login.
 get_food_id(food_name): Get the food id of the food.
 lookup(name): Get the details of the food item.
 
-#####app.py
+
+app.py
 The app.py file contains all the logic of the program. This is the main file that runs the application. The following routes are present in the file:
 
 /: Shows what the user has eaten throughout the day.
